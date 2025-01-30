@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import GithubIcon from "../../../public/github-icon.svg";
+import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -15,20 +17,20 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
             <TypeAnimation
               sequence={[
-                "Judy",
+                "Shrikant Sherkar",
                 1000,
-                "Web Developer",
+                "DevOps Engineer",
                 1000,
-                "Mobile Developer",
+                "AWS Cloud Engineer",
                 1000,
-                "UI/UX Designer",
+                "S.R.E",
                 1000,
               ]}
               wrapper="span"
@@ -37,25 +39,25 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+            Cloud & DevOps Enthusiast | 2+ Years of Experience in L2 Support | Passionate About Cloud Automation, IaC, and CI/CD Pipelines, AWS enthusiast.
           </p>
-          <div>
-            <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
-            >
-              Hire Me
-            </Link>
-            <Link
-              href="/"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </Link>
-          </div>
+            <div className="flex justify-center items-center space-x-6">
+	    <Link href="https://github.com/ShrikantBS">
+	      <Image src={GithubIcon} alt="Github Icon" width={50} height={50} />
+	    </Link>
+	    <Link href="https://www.linkedin.com/in/s-sherkar/">
+	      <Image src={LinkedinIcon} alt="LinkedIn Icon" width={50} height={50} />
+	    </Link>
+	    {/* Contact Number */}
+	      <a href="tel:+1234567890" className="text-white text-lg font-medium hover:underline">
+	      +91 8999433794
+	    </a>
+
+	    {/* Email */}
+	    <a href="mailto:yourmail@example.com" className="text-white text-lg font-medium hover:underline">
+	      shrikantsherkar2022@gmail.com.com
+	    </a>
+	  </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
